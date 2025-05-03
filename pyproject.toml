@@ -21,3 +21,9 @@ build-backend = "poetry.core.masonry.api"
 ruff = "^0.11.8"
 pre-commit = "^4.2.0"
 
+[tool.poetry]
+name = "color-mixer-app"
+version = "0.1.0"
+description = "Color mixer app using Kivy and KivyMD"
+authors = ["black40, black40@i.ua"]
+packages = [{ include = "app" }]
