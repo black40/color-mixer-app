@@ -1,0 +1,15 @@
+# ruff.toml
+
+target-version = "py312"
+line-length = 88
+src = ["app"]
+
+[lint]
+select = ["E", "F", "I", "UP", "N", "B"]
+ignore = ["B008"]
+fixable = ["ALL"]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"

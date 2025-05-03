@@ -1,13 +1,10 @@
-from kivymd.app import MDApp
-from kivy.properties import NumericProperty
-from kivy.graphics import Color, Rectangle
 from kivy.core.clipboard import Clipboard
-from kivymd.uix.snackbar import MDSnackbar
-from kivymd.uix.label import MDLabel
+from kivy.graphics import Color, Rectangle
+from kivy.properties import NumericProperty
+from kivymd.app import MDApp
 from kivymd.uix.button import MDFlatButton
-
-
-
+from kivymd.uix.label import MDLabel
+from kivymd.uix.snackbar import MDSnackbar
 
 
 class ColorMixerApp(MDApp):
