@@ -1,0 +1,42 @@
+<RGBSlider@MDSlider>:
+    min: 0
+    max: 255
+    step: 1
+    value: 0
+    size_hint_x: 0.8
+    on_value: app.update_color()
+
+MDScreen:
+    BoxLayout:
+        orientation: "vertical"
+        padding: dp(20)
+        spacing: dp(20)
+
+        MDLabel:
+            text: "Цветовой микшер"
+            halign: "center"
+            font_style: "H5"
+
+        Widget:
+            id: color_preview
+            size_hint_y: 0.4
+
+        MDLabel:
+            id: hex_label
+            text: "#000000"
+            halign: "center"
+
+        RGBSlider:
+            id: red_slider
+            color: 1, 0, 0, 1
+        RGBSlider:
+            id: green_slider
+            color: 0, 1, 0, 1
+        RGBSlider:
+            id: blue_slider
+            color: 0, 0, 1, 1
+
+        MDRaisedButton:
+            text: "Скопировать HEX"
+            pos_hint: {"center_x": 0.5}
+            on_release: app.copy_to_clipboard()
