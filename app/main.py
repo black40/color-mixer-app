@@ -5,6 +5,7 @@ from kivymd.app import MDApp
 from kivymd.uix.button import MDFlatButton
 from kivymd.uix.label import MDLabel
 from kivymd.uix.snackbar import MDSnackbar
+import os
 
 
 class ColorMixerApp(MDApp):
@@ -12,7 +13,14 @@ class ColorMixerApp(MDApp):
     g = NumericProperty(0)
     b = NumericProperty(0)
 
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        # Указываем путь к KV файлу
+        kv_dir = os.path.dirname(os.path.abspath(__file__))
+        self.kv_file = os.path.join(kv_dir, "colormixer.kv")
+
     def build(self):
+        self.title = "Color Mixer"
         self.color_rect = None
         self.init_color_preview()
         return self.root
